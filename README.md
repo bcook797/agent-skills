@@ -1,6 +1,6 @@
 # Agent Skills
 
-A collection of installable skills for [Claude Code](https://github.com/anthropics/claude-code) that extend the agent with specialized architectural and engineering workflows.
+A collection of installable skills that extend AI agents with specialized architectural and engineering workflows. Works with Claude Code, OpenCode, Cursor, Copilot, Cline, Windsurf, Gemini, and [many more](https://skills.sh).
 
 ## Skills
 
@@ -36,14 +36,30 @@ Guides users through creating compelling, well-documented blip submissions for t
 
 ## Installation
 
-Skills are installed into your Claude Code project by copying the skill directory into your project's `.claude/skills/` folder (or equivalent plugin path configured for your setup).
+Clone this repo, then use the `skills` CLI to install into your project. The CLI detects your agents and installs to the right place automatically.
 
 ```bash
-# Example: install the adr-builder skill into your project
-cp -r plugin/adr-builder /your-project/.claude/skills/
+git clone https://github.com/bcook797/agent-skills
+cd agent-skills
+npx skills add .
 ```
 
-Refer to the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) for full details on skill installation and discovery.
+To install globally (available in all projects) instead of just the current project:
+
+```bash
+npx skills add . --global
+```
+
+To install for a specific agent only:
+
+```bash
+npx skills add . --agent claude-code
+npx skills add . --agent opencode
+```
+
+See [skills.sh/docs](https://skills.sh/docs) for full CLI documentation.
+
+---
 
 ## Structure
 
