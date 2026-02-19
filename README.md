@@ -39,9 +39,7 @@ Guides users through creating compelling, well-documented blip submissions for t
 Clone this repo, then use the `skills` CLI to install into your project. The CLI detects your agents and installs to the right place automatically.
 
 ```bash
-git clone https://github.com/bcook797/agent-skills
-cd agent-skills
-npx skills add .
+npx skills add https://github.com/bcook797/agent-skills
 ```
 
 To install globally (available in all projects) instead of just the current project:
